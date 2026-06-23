@@ -1,0 +1,67 @@
+# .gitignore for VPN Traffic Identification project
+# Ignore common Python and OS files, virtual environments, data and model artifacts
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Data and model artifacts (do NOT commit large datasets or trained binaries)
+# If you want to include the training CSV in version control, remove the
+# `consolidated_traffic_data.csv` entry below or replace it with an allow-list.
+# consolidated_traffic_data.csv
+*.pkl
+*.joblib
+models/
+data/
+
+# Logs
+*.log
+
+# Environment files / secrets
+.env
+.env.*
+
+# Databases
+*.sqlite3
+*.db
+
+# Archives
+*.tgz
+*.gz
+
