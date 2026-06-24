@@ -59,3 +59,7 @@ print(f"Validation Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")
 joblib.dump(model, os.path.join(BASE_DIR, 'vpn_rf_model.pkl'))
 joblib.dump(label_encoder, os.path.join(BASE_DIR, 'label_encoder.pkl'))
 print("[SUCCESS] New Master 23-Feature Model saved successfully!")
+
+print("VPN samples in test set:", sum(y_test == label_encoder.transform(['VPN'])[0]))
+print("VPN correctly predicted:", sum((y_pred == label_encoder.transform(['VPN'])[0]) & (y_test == label_encoder.transform(['VPN'])[0])))
+print(classification_report(y_test, y_pred, target_names=label_encoder.classes_))
